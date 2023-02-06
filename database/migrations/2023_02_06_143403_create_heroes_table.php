@@ -16,9 +16,7 @@ return new class extends Migration {
             $table->id();
             $table->string('first_name', 32)->nullable(false);
             $table->string('last_name', 32)->nullable(false);
-            // must be in the past
             $table->date('date_of_birth')->nullable(false);
-            // must be 0 or more
             $table->integer('heigth')->nullable();
             $table->timestamps();
         });
