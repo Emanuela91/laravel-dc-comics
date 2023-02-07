@@ -1,6 +1,7 @@
 @extends('layouts.main-layout')
 
 @section('content')
+    <a href="{{ route('hero.create') }}">CREATE NEW HERO</a>
     <ul>
         @foreach ($heroes as $hero)
             <li>

@@ -25,3 +25,11 @@ Route::get('/', [MainController::class, 'home'])
 // prende la funzione 'delete' e la porta in index 
 Route::get('/hero/delete/{hero}', [MainController::class, 'heroDelete'])
     ->name('hero.delete');
+
+// prende la funzione 'create' per creare un nuovo eroe 
+Route::get('/hero/create', [MainController::class, 'heroCreate'])
+    ->name('hero.create');
+
+// rotta per la ricezione dei dati dal form: crea eroe 
+Route::post('/hero/store', [MainController::class, 'heroStore'])
+    ->name('hero.store');
