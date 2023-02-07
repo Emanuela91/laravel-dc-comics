@@ -18,5 +18,10 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+// mostra il contenuto index riprendendo la funzione in Main Controller
+Route::get('/', [MainController::class, 'home'])
+    ->name('home');
 
-Route::get('/', [MainController::class, 'home']);
+// prende la funzione 'delete' e la porta in index 
+Route::get('/hero/delete/{hero}', [MainController::class, 'heroDelete'])
+    ->name('hero.delete');

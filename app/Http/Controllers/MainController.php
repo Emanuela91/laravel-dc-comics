@@ -13,4 +13,11 @@ class MainController extends Controller
 
         return view('pages.home', compact('heroes'));
     }
+
+    public function heroDelete(Hero $hero)
+    {
+        $hero->delete();
+
+        return redirect()->route('home');
+    }
 }
