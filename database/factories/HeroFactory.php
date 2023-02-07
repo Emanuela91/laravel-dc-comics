@@ -20,7 +20,7 @@ class HeroFactory extends Factory
             'first_name' => fake()->firstName(),
             'last_name' => fake()->lastName(),
             'date_of_birth' => fake()->dateTimeThisCentury(),
-            'heigth' => fake()->numberBetween(0, 200),
+            'heigth' => fake()->numberBetween(50, 200),
         ];
     }
 }
